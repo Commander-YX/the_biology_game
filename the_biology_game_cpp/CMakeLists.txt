@@ -1,7 +1,7 @@
 ﻿cmake_minimum_required(VERSION 3.10)
 
 # Project info
-project(the_biology_game_cpp VERSION 1.0)
+project(the_biology_game_cpp VERSION 0.0.0)
 
 # C++ standard
 set(CMAKE_CXX_STANDARD 17)
