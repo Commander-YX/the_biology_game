@@ -1,16 +1,17 @@
 ﻿#include <iostream>
+#include <ostream>
 #include <string>
-#include <vector>
-#include <cstdlib>
-#include <ctime>
-#include <memory>
 #include "player.h"
+#include "item.h"
+#include "game.h"
 #pragma once
 
 int main() {
 	std::string name;
 	std::cout << "Adventurer, please enter your name: ";
 	std::cin >> name;
+
+	Game game(name);
 
 	Player player(name);
 	player.greet();
@@ -22,11 +23,12 @@ int main() {
 	Potion healingPotion;
 	Weapon sword;
 
-	player.weapons.push_back(sword);
-	weapons.push_back(std::make_unique<Weapon>(sword));
+	player.weapons.push_back(std::make_unique<Weapon>(sword));
 
 	//Here we must add the initialized objects to the player inventory/class vector
-	
+
+	std::cout << player.weapons.at(0)->description << std::endl;
+
 	return 0;
 }
 
